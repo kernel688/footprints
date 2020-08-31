@@ -4,20 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Footprints</title>
 </head>
 <body>
-    <h2>Enter transactions:</h2>
-    <form>
-        <label>Income: <input type="radio" name="trx-type" value="Income" id="trx-type-income"></label>
-        <label>Expense: <input type="radio" name="trx-type" value="Expense" id="trx-type-expense"></label>
-    </form>
-    <label>Amount: <input type="number" id="trx-amount" autofocus></label>
-    <input type="button" value="Save Transaction" id="submitButton">
+    <section>
+        <h2 class="section-title">Enter Transactions</h2>
+        <form class="form">
+            <label>Income: <input class="form-input" type="radio" name="trx-type" value="Income" id="trx-type-income"></label>
+            <label>Expense: <input class="form-input" type="radio" name="trx-type" value="Expense" id="trx-type-expense"></label>
+            <label>Amount: <input class="form-input" type="number" id="trx-amount" autofocus></label>
+            <input class="form-submit" type="button" value="Save Transaction" id="submitButton">
+        </form>
+    </section>
     
-    <h2>Current Balance:</h2>
-    <p>COP: $</p><p id="currentBalance">1000</p>
+    <section>
+        <h2 class="section-title">Current Balance</h2>
+        <div class="balance">
+            <p class="balance-currency">COP</p>
+            <p class="balance-amount" id="currentBalance">1000</p>
+        </div>
+    </section>
 
+    <section>
+        <h2 class="section-title">Registered Transactions</h2>
+        <div class="transactions">
+            <table class="transactions-table">
+                <tr class="transactions-table-header">
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Notes</th>
+                    <th>Delete</th>
+                </tr>
+                <tr class="transactions-table-data">
+                    <td>Date</td>
+                    <td>Type</td>
+                    <td>Amount</td>
+                    <td>Notes</td>
+                    <td>Delete</td>
+                </tr>
+            </table>
+
+            
+        </div>
+    </section>
 
 
 
