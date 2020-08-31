@@ -1,0 +1,22 @@
+{
+  "name": "footprints",
+  "version": "1.0.0",
+  "description": "First Steps Towards Big Project",
+  "main": "index.ts",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "index.html"
+  },
+  "keywords": [
+    "typescript",
+    "project"
+  ],
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
+  "author": "kernel688",
+  "license": "MIT"
+}
