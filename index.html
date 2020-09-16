@@ -12,9 +12,9 @@
         <h2 class="section-title">Enter Transactions</h2>
         <form class="form">
             <label>Income: <input class="form-input" type="radio" name="trx-type" value="Income" id="trx-type-income"></label>
-            <label>Expense: <input class="form-input" type="radio" name="trx-type" value="Expense" id="trx-type-expense"></label>
-            <label>Amount: <input class="form-input" type="number" id="trx-amount" autofocus></label>
-            <label>Description: <input class="form-input" type="text" id="trx-description"></label>
+            <label>Expense: <input class="form-input" type="radio" name="trx-type" value="Expense" id="trx-type-expense" checked></label>
+            <label>Amount: <input class="form-input" type="number" id="trx-amount" value="500" autofocus></label>
+            <label>Description: <input class="form-input" type="text" id="trx-description" value="Rent"></label>
             <input class="form-submit" type="button" value="Save Transaction" id="submitButton">
         </form>
     </section>
@@ -23,7 +23,7 @@
         <h2 class="section-title">Current Balance</h2>
         <div class="balance">
             <p class="balance-currency">COP</p>
-            <p class="balance-amount" id="currentBalance">1000</p>
+            <p class="balance-amount" id="currentBalance">10000</p>
         </div>
     </section>
 
@@ -32,6 +32,7 @@
         <div class="transactions">
             <table class="transactions-table">
                 <tr class="transactions-table-header" id="transactions-table-header">
+                    <th>N.</th>
                     <th>Date</th>
                     <th>Type</th>
                     <th>Amount</th>
