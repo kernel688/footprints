@@ -1,6 +1,6 @@
 import {trxTimeStamp,trxDate,trxDateTime} from './sharedfunctions.js'
 
-
+let trxRecords = []
 let submitButton = document.getElementById('submitButton')
 submitButton.addEventListener('click',checkAddTrx)
 
@@ -19,7 +19,9 @@ function checkAddTrx() {
     let trxType = ''
     let successfulCheck = 0
     let successfulAdd = false
-
+    let trxNumber = 0
+    let trxID = '000000000'
+    
     
     //*************************************//
     //*** CHECKS ALL TRANSACTION INPUTS ***//
@@ -72,15 +74,22 @@ function checkAddTrx() {
     if (successfulAdd) {
         trxTimeStamp()
         
+        trxRecords.push([trxDate,trxType,getTrxAmount,getTrxDescription])
+        trxNumber = trxRecords.length
+        trxID = String(trxNumber).padStart(9,'0')
+
         getTableHeaders.insertAdjacentHTML('afterend',`
         <tr class="transactions-table-data">
+            <td>${trxNumber}</td>
             <td>${trxDate}</td>
             <td>${trxType}</td>
             <td>${getTrxAmount}</td>
             <td>${getTrxDescription}</td>
-            <td><a id="trxID" class="trxDelete">Delete</a></td>
+            <td><a id="trxID${trxID}" class="trxDelete" href="#">Delete</a></td>
             <td>Edit</td>
         </tr>`)
+
+        
     }
 
 }
