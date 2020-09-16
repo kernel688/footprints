@@ -14,6 +14,7 @@
             <label>Income: <input class="form-input" type="radio" name="trx-type" value="Income" id="trx-type-income"></label>
             <label>Expense: <input class="form-input" type="radio" name="trx-type" value="Expense" id="trx-type-expense"></label>
             <label>Amount: <input class="form-input" type="number" id="trx-amount" autofocus></label>
+            <label>Description: <input class="form-input" type="text" id="trx-description"></label>
             <input class="form-submit" type="button" value="Save Transaction" id="submitButton">
         </form>
     </section>
@@ -30,19 +31,13 @@
         <h2 class="section-title">Registered Transactions</h2>
         <div class="transactions">
             <table class="transactions-table">
-                <tr class="transactions-table-header">
+                <tr class="transactions-table-header" id="transactions-table-header">
                     <th>Date</th>
                     <th>Type</th>
                     <th>Amount</th>
                     <th>Notes</th>
                     <th>Delete</th>
-                </tr>
-                <tr class="transactions-table-data">
-                    <td>Date</td>
-                    <td>Type</td>
-                    <td>Amount</td>
-                    <td>Notes</td>
-                    <td>Delete</td>
+                    <th>Edit</th>
                 </tr>
             </table>
 
@@ -51,9 +46,6 @@
     </section>
 
 
-
-
-
-    <script src="scripts/main.js"></script>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
